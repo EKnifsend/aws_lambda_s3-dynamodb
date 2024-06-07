@@ -1,0 +1,28 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "sts:AssumeRole",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+          "s3:PutObject"
+      ],
+      "Resource": [
+          "*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+          "dynamodb:PutItem"
+      ],
+      "Resource": [
+          "arn:aws:dynamodb:*:*:table/test-table"
+      ]
+  }
+  ]
+}
